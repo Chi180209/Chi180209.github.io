@@ -124,15 +124,16 @@ body{
     left: 25px;
     display: visible;
     height: 100%;
-    width: 45px;
+    width: 40px;
     color: var(--mauChu);
     font-size: 40px;
     
     font-weight: 200;
-    /* writing-mode: vertical-rl; */
+    
     text-align: center;
     letter-spacing: 5px;
     transition: 0.4s;
+    
     
 }
 .menuTop.toggle .current{
@@ -908,6 +909,7 @@ width: 100%;
 
 }
 @media only screen and (min-width: 992px){
+    
     .contentLetter{
         writing-mode: vertical-rl;
         text-orientation: upright;
