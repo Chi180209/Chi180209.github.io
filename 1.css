@@ -1,0 +1,971 @@
+:root{
+    --mauChu: #7a5932;
+    --mauNenNhat: #fcf7f1;
+    --mauNenDam: #faeddf;
+    --mauDamHon:#f0deca;
+    --mauHighlight: #198597;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+  
+}
+body{
+    position: relative;
+}
+/* menuTop */
+.menuTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--mauDamHon);
+    z-index: 99;
+    height: 100%;
+    width: 90px;
+    
+    
+    
+}
+.holder{
+    position: relative;
+    
+
+}
+.menuTop.toggle{
+    width: 200px;
+    transition: 0.4s;
+}
+.bntHome{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 30px;
+    height: 27px;
+    z-index: 100;
+    margin-right: 30px;  
+}
+.bntHome:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 3px;
+    background-color: var(--mauChu);
+
+}
+.bntHome:after{
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 7px;
+    width: 23px;
+    height: 3px;
+    background-color: var(--mauChu);
+}
+.bnt1Line{
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 15px;
+    height: 3px;
+    background-color: var(--mauChu);
+
+}
+.bntHome:hover:after{
+    left: 0px;
+    transition: 0.4s;
+}
+.bntHome:hover .bnt1Line{
+    left: 0px;
+    transition: 0.4s;
+}
+.menuTop.toggle .bntHome:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    width: 30px;
+    height: 3px;
+    background-color: var(--mauChu);
+    transform: rotate(45deg);
+    transition: 0.2s;
+}
+.menuTop.toggle .bntHome:hover:before{
+    background-color: var(--mauHighlight);
+}
+.menuTop.toggle .bntHome:after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    width: 30px;
+    height: 3px;
+    background-color: var(--mauChu);
+    transform: rotate(-45deg);
+    transition: 0.2s;
+}
+.menuTop.toggle .bntHome:hover:after{
+    background-color: var(--mauHighlight);
+}
+.menuTop.toggle .bntHome .bnt1Line{
+    display: none;
+}
+.current{
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    display: visible;
+    height: 100%;
+    width: 45px;
+    color: var(--mauChu);
+    font-size: 40px;
+    
+    font-weight: 200;
+    /* writing-mode: vertical-rl; */
+    text-align: center;
+    letter-spacing: 5px;
+    transition: 0.4s;
+    
+}
+.menuTop.toggle .current{
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    margin-top: 100px;
+    
+    z-index: 999;
+    
+    width: 200px;
+    height: 100%;
+    transform: translateX(-150%);
+    transition: 0.4s;
+    
+}
+.menuTop.toggle .menu{
+    
+    transform: translateX(0) ;
+    
+
+}
+
+.menu ul li{
+    list-style: none;
+    color: var(--mauChu);
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.menu a{
+    color: var(--mauChu);
+    
+}
+.menu a:link{
+    text-decoration: none;
+}
+.menu ul li a:hover, .menu ul li a.hl, .social a:hover{
+    color: var(--mauHighlight);
+}
+.social{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.social a {
+    color: var(--mauChu);
+    
+}
+.social a:link{
+    text-decoration: none;
+}
+
+
+/* het menuTop */
+
+
+
+/* content */
+.content{
+    position: relative;
+    width: 100%;
+    background-color: var(--mauNenNhat);
+    padding-left: 90px;
+    overflow: hidden;   
+}
+.content h3{
+    color: var(--mauChu);
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.avatar{
+
+    margin: auto;
+    padding: 20%;
+    
+}
+.avatar img {
+    width: 100%;
+    
+}
+.intro{
+    padding: 10% 15% 10% 0;
+    color: #7a5932;
+}
+.intro h1{
+    font-size: 75px;
+    font-weight: 200;
+    line-height: 74px;
+    margin-bottom: 35px;
+}
+.intro h4{
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 25px;
+}
+.intro span{
+    font-weight: bolder;
+    font-size: 35px;
+    color: #198597;
+    line-height: 15px;
+}
+.intro p{
+    
+}
+.info{
+    background-color: #198597;
+    padding: 5%;
+    margin: 0 5% 5% 5%;
+}
+.info table{
+    margin: 0 auto; 
+    color:var(--mauNenNhat);
+    font-size:  19px;
+    font-weight: 200;
+    line-height: 30px;
+    padding: 50px;
+}
+.info tbody{
+    margin: 20px;
+}
+.info tr{
+    padding: 5px;
+}
+.info td{
+    padding: 10px;
+}
+ul.timeLine{
+    margin-left: 75px;
+    margin-top: 20px;
+}
+li.line{
+    list-style: none;
+    position: relative;
+    padding-bottom: 50px;
+    color: var(--mauChu);
+}
+li.line:before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: calc(100% - 20px);
+    left: -22px;
+    top: 27px;
+    background-color:var(--mauHighlight);
+}
+span.circle:before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 90%;
+    border: 2px solid var(--mauHighlight);
+    position: absolute;
+    left: -30px;
+    top: 7px;
+    z-index: 1;
+    transition: .3s;
+}
+span.circle:after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: -26px;
+    top: 11px;
+    border-radius: 90%;
+    background-color: var(--mauHighlight);
+    opacity: 0;
+    transition: opacity .3s;
+}
+.line:hover span.circle:after{
+    opacity: 1;
+}
+.line:hover .text{
+    color: var(--mauHighlight);
+}
+.time{
+    position: absolute;
+    left: -40px;
+    top:2px;
+    transition: .3s;
+    color:var(--mauChu);
+    font-weight: 300;
+    line-height: 15px;
+    text-align: center;
+    transform: translateX(-100%);
+}
+.line:hover .time{
+    color: var(--mauHighlight);
+    font-weight: 400;
+}
+.education, .experience{
+    padding: 15px;
+    margin: 0 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skill{
+    margin: 25px  20px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mauHighlight);
+    color: var(--mauNenNhat);
+}
+.skill h3{
+    color: var(--mauNenNhat);
+    line-height: 30px;
+    padding: 20px;
+}
+.icon{ 
+    display: inline-block;
+    width: 100%; 
+    text-align: center;
+}
+.itemBo{
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+}
+.itemlop1{
+    font-size: 100px;
+    
+    color: var(--mauNenNhat);
+    margin: 20px auto
+}
+.itemlop2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mauNenNhat);
+    opacity: 0.8;
+    transition: 0.4s;
+    transform: scale(0);
+}
+.itemlop3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 150px;
+    color: var(--mauChu);
+    font-size: 35px;
+    transition: 0.4s;
+    transform: scale(0);
+}
+.itemBo:hover .itemlop2{
+    transform: scale(1);
+}
+.itemBo:hover .itemlop3{
+    transform: scale(1);
+}
+
+.explain_small{
+    padding: 20px;
+    border: solid 2px var(--mauHighlight);
+    margin: 25px 0px;
+}
+.explain_small h5{
+    color: var(--mauChu);
+    font-size: 20px;
+    font-weight: 320px;
+    line-height: 25px;
+}
+.explain_small p {
+    text-align: right;
+    color: var(--mauChu);
+    font-size: 15px;
+    font-weight: 150;
+    line-height: 10px;
+    margin-bottom: 35px;
+}
+.explain .tools{
+    text-align: right;
+}
+.language{
+    text-align: left;
+    vertical-align: middle;
+    
+    margin: 25px 30px; 
+    justify-content: center;
+    align-items: center;
+}
+.bangNgonNgu{
+    width: 80%;
+    margin: 0 auto;
+}
+.bangNgonNgu table{
+    width: 100%;
+}
+.bangNgonNgu tbody{
+    text-align: center;
+}
+.bangNgonNgu tr{
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.tenNgonNgu{
+    width: 25%;
+    color: var(--mauChu);
+    font-size: 20px;
+    font-weight: 320px;
+    line-height: 20px;
+    padding: 10px 0;
+}
+.note{
+    color: var(--mauChu);
+    font-size: 15px;
+    font-weight: 150;
+    line-height: 0px;
+    
+}
+.bangNgonNgu .barMau{
+    background-color: var(--mauHighlight);
+    color: var(--mauNenNhat);
+}
+
+.certification{
+    margin: 25px 30px;
+}
+.slideCuaMinh{
+    width: 60%;
+    height: 30%;
+    margin: 20px auto;
+    
+}
+
+.slideCuaMinh .carousel-indicators li{
+    background-color: var(--mauChu);
+}
+
+.slideCuaMinh .carousel-inner, .slideCuaMinh .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+.slideCuaMinh img{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.letterPR{
+    margin: 50px auto;
+    width: 90%;
+    display: flex;
+    
+}
+
+.titleLetter{
+    background-color: var(--mauHighlight);
+    /* height: 100%; */
+    width: 20%;
+    
+    
+}
+.titleLetter h3{
+    color: var(--mauNenNhat);
+    font-size: 60px;
+    text-align: center;
+    margin: auto;
+    padding:20px 10px;
+    
+    font-weight: 200;
+    
+    writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+.contentLetter{
+    background-color: var(--mauNenDam);
+    /* height: 100%; */
+    width: 80%;
+    padding: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: var(--mauChu);
+    
+    font-size: 17px;
+    font-weight: 150;
+}
+.favourist{
+    margin-top: 50px;
+}
+.navBarFavor{
+    margin: 0px;
+}
+.navBarFavor li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    color: var(--mauChu);
+    font-size: 20px;
+    font-weight: 220;
+    line-height: 30px;
+}
+.navBarFavor li.now,
+.navBarFavor li:hover{
+    color: var(--mauHighlight);
+}
+.mansory{
+    
+    column-count: 5;
+}
+.mansory img{
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+}
+.mansory img.active{
+    width: 100%;
+    height: auto;
+    padding-top: 18px;
+    transition: all 0.5s ease;
+
+}
+.mansory img.delete{
+    width: 0;
+    height: 0;
+    opacity: 0;;
+    padding: 0;
+    transition: all 0.5s ease;
+}
+
+.mansory .card.active{
+    width: 100%;
+    height: 100%;
+    
+    transition: all 0.5s ease;
+}
+.mansory .card.delete{
+    width: 0%;
+    height: 0%;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+
+
+#porfolio{
+    margin: 80px auto;
+}
+.bntList{
+    position: relative;
+    width: 100%;
+}
+.buttonList{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    float:right;
+}
+.button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    background-color: var(--mauChu);
+    transition: 0.4s;
+}
+.button:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 12px;
+    height: 3px;
+    background-color: var(--mauChu);
+}
+.button:after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    width: 12px;
+    height: 3px;
+    background-color: var(--mauChu);
+    transition: 0.4s;
+}
+.buttonList:hover .button{
+    width: 30px;
+}
+.bntList.toggleNho .buttonList .button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--mauChu);
+    
+    
+    
+}
+.buttonList:hover .button:after{
+    right: 12px;
+}
+.bntList.toggleNho .buttonList .button:after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 30px;
+    height: 3px;
+    background-color: var(--mauChu);
+    transition: 0.4s;
+    transform: rotate(-45deg);
+}
+.bntList.toggleNho .buttonList .button:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--mauChu);
+    transition: 0.4s;
+    
+    transform: rotate(45deg);
+}
+.listPo{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    background-color: var(--mauNenDam);
+    z-index: 98;
+    transition: 0.4s;
+    opacity: 0;
+}
+.bntList.toggleNho .listPo{
+    opacity: 1;
+}
+.listPo ul{
+    padding: 15px 20px 8px 20px;
+}
+.listPo ul li{
+    list-style: none;
+    color: var(--mauChu) ;
+    padding: 5px 0;
+    font-size: 20px;
+    text-align: right;  
+}
+.listPo ul li.now,
+.listPo ul li:hover{
+    color: var(--mauHighlight);
+}
+
+.filter-ItemPo{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+.filter-ItemPo li{
+    width: 33.33%;
+    padding: 15px;
+
+}
+.filter-ItemPo li.active{
+    width: 33.33%;
+    padding: 15px;
+    transition: all 0.5s ease;
+}
+.filter-ItemPo li.delete{
+    width: 0%;
+    padding: 0px;
+    transition: all 0.5s ease;
+}
+.filter-ItemPo li img{
+    width: 100%;
+    height: 250px;
+    
+}
+    
+
+
+.bo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.lop1{
+    width: 100%;
+    height: 100%;
+}
+.lop2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--mauHighlight);
+    transition: 0.4s;
+}
+.lop3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--mauNenNhat);
+    font-size: 50px;
+    font-weight: 200;
+    opacity: 0;
+    transition: 0.4s;
+}
+.filter-ItemPo li:hover .lop2{
+width: 100%;
+}
+.filter-ItemPo li:hover .lop3{
+    opacity: 1;
+}
+/* het portofolio */
+.nd{
+    margin-top: 100px;
+    background-color: var(--mauHighlight);
+    padding-top: 40px;
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+}
+.ndtrai, .ndphai{
+    width: 50%;
+    color: var(--mauNenNhat);
+}
+.ndtrai{
+    padding-left: 30px;
+}
+.ndphai{
+    text-align: right;
+    padding-right: 30px;
+}
+.traitim{
+    color: pink;
+}
+
+
+
+
+
+
+
+/* het content */
+
+/* css cho cac man hinh dien thoai */
+@media only screen and (max-width:600px){
+    .menuTop{
+        width: 100%;
+        height: 90px;
+        overflow-y: scroll;
+    }
+    
+    .menuTop.toggle{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .current{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        text-align: center;
+        writing-mode: unset;
+        padding-top: 20px;
+        padding-right: 15px;
+        text-align: right;
+        transition: 0.4s;
+        font-size: 30px;
+    }
+    .menu{
+        width: 100%;
+        
+        margin: 100px auto;
+        
+    }
+    
+    .menu ul {
+        margin: 0 auto;
+    }
+    .menu ul li{
+        margin: 0 auto;
+        text-align: center;
+    
+    }
+    .content{
+        padding-left: 0;
+        margin-top: 90px;
+    }
+    .avatar{
+        padding: 50px;
+    }
+    .intro{
+        padding: 20px;
+    }
+    .intro h1{
+        font-size: 55px;
+    }
+    .education, .experience, .skill,  .language, .certification{
+        padding: 20px;
+        margin: auto;
+    }
+    .slideCuaMinh{
+        width: 90%;
+        height: 230px;
+    }
+    .letterPR{
+        padding: 0px;
+        margin-top: 20px;
+    }
+    .titleLetter h3{
+        
+        padding:20px 5px;
+        margin: auto;
+        font-size: 50px;
+        text-align: center;
+        line-height: 25px;
+    }
+    .contentLetter{
+        padding: 20px;
+        writing-mode: unset;
+        text-orientation: unset;
+    }
+    .filter-ItemPo li{
+        width: 100%;;
+    }
+    .filter-ItemPo li.active{
+        width: 100%;
+    }
+    .nd{
+        flex-wrap: wrap;
+    }
+    .ndtrai, .ndphai{
+        width: 100%;
+        text-align: center;
+    }
+    .ndtrai{
+        padding-left: 0;
+    }
+    .ndphai{
+        padding-right: 0;
+    }
+
+    
+}
+@media only screen and (min-width:600px){
+    .contentLetter{
+        padding: 20px;
+        writing-mode: unset;
+        text-orientation: unset;
+    }
+    .filter-ItemPo li{
+        width: 50%;
+    }
+    .filter-ItemPo li.active{
+        width: 50%;
+    }
+
+}
+@media only screen and (min-width: 992px){
+    .contentLetter{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }    
+    .filter-ItemPo li{
+        width: 33.33%;
+    }
+    .filter-ItemPo li.active{
+        width: 33.33%;
+    }
+    
+}
+@media only screen and (min-width:1440px){
+    .menuTop{
+        width: 100%;
+        height: 90px;
+    }
+    .bntHome{
+        display: none;
+    }
+    .current{
+        display: none;
+    }
+    .menu{
+        transform: translateX(-50%);
+        margin-left: 45%;
+        width: 100%;
+        height: 90px;
+        margin-top: 25px;
+        display: flex;
+    }
+    .menu ul{
+        margin-left: 150px;
+        width: 70%;
+        
+    }
+    .menu ul li{
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 28px;
+        
+        font-weight: 200;
+    }
+    .social{
+        margin-top: 0;
+        width: 30%;
+        text-align: right;
+        padding-right: 0px;
+        padding-top: 15px;
+    }
+    
+    .content{
+        padding-left: 0;
+        padding-top: 100px;
+    }
+    .letterPR{
+        width: 80%;  
+    }
+    
+
+}

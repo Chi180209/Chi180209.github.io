@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+:root {
+    --font1:'Oswald', sans-serif;
+    --size1: 45px;
+    --lineheight1: 70px;
+    --lineheight2: 30px;
+    --font2:'Amiri', serif;
+    --size2: 20px;
+    --color2:#666;
+    --size3: 22px;
+}
+
+.banner_top{
+    background: url(img/fs.jpg) top center;
+    
+    height: 600px;
+    
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.banner_top:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: -webkit-linear-gradient(left, #0000009e 0%, #01010100 50%, #00000069 100%);
+}
+.banner_top ._3cot{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+.banner_top ._3cot ._1cot{
+    width: 33.33%;
+}
+.banner_top ._3cot ._1cot.cottrai{
+
+}
+.banner_top ._3cot ._1cot.cottrai a{
+    font-size: 25px;
+    color: white;
+    display: inline-block;
+    padding: 20px 30px;
+
+}
+.banner_top ._3cot ._1cot.cottrai a:hover{
+    color: #0345bf;
+}
+.banner_top ._3cot ._1cot.cotgiua{
+    text-align: center;
+
+}
+.banner_top ._3cot ._1cot.cotgiua img{
+    height: 60px;
+    padding-top: 20px;
+}
+.banner_top ._3cot ._1cot.cotphai{
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.banner_top ._3cot ._1cot.cotphai a{
+    color: white;
+    font-size: 20px;
+    padding: 15px 10px;
+    display: inline-block;
+}
+.text_banner{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+
+}
+.text_banner .content{
+    width: 80%;
+    margin: auto;
+    padding: 80px 20px;
+    
+}
+.text_banner .content .small{
+    color: white;
+    font-size: var(--size2);
+    font-family: var(--font1);
+}
+.text_banner .content h1{
+    font-family: var(--font1);
+    font-size: var(--size1);
+    line-height: var(--lineheight1);
+    color: white;
+    font-weight: 300;
+
+}
+
+/* end css top */
+
+.content1{
+    width: 80%;
+    margin: auto;
+    padding: 80px 10px;
+    display: flex;
+    font-family: var(--font2);
+    font-size: var(--size2);
+    color: var(--color2);
+}
+.content1 .left{
+    width: 35%;
+}
+.content1 .left span{}
+.content1 .left h2{
+    font-family: var(--font1);
+    font-size: var(--size3);
+    width: 80%;
+    font-weight: 400;
+    line-height: var(--lineheight2);
+}
+.content1 .right{
+    width: 65%;
+}
+.content1 .right p{
+    line-height: var(--lineheight2);
+    margin-top: 15px;
+}
+/* end css content1 */
+.content2{
+    width: 100%;
+    background: black;
+    margin: auto;
+    padding: 60px 20px;
+}
+.menu{
+    width: 100%;
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 10px;
+}
+.galerry{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mothinh{
+    width: 50%;
+    padding: 20px ;
+    position: relative;
+}
+.mothinh img{
+    width: 100%;
+}
+.chunho{
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    font-size: 20px;
+    font-family: var(--font2);
+    color: white;
+    padding:0 8px;
+    opacity: 0;
+    transition: 0.4s;
+    transition-delay: 0.2s;
+    /* transform: translateX(-250px); */
+}
+.chunho:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color:white;
+    
+}
+
+.mothinh:hover .chunho:before{
+    -webkit-animation-name: hoverchunho;
+    animation-duration: 0.8s;
+    
+}
+@-webkit-keyframes hoverchunho{
+    0%{width: 0%;}
+    50%{width: 100%;}
+    100%{width:0%;}
+}
+.chuto{
+    position: absolute;
+    top: 85px;
+    right: 40px;
+    font-size: 30px;
+    font-family: var(--font1);
+    color: white;
+    text-transform: uppercase;
+    padding:0 8px;
+    opacity: 0;
+    transition: 0.4s;
+    transition-delay: 0.2s;
+    /* transform: translateY(250px); */
+}
+.chuto:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0%;
+    height: 100%;
+    background-color:white;
+}
+
+.mothinh:hover .chuto:before{
+    -webkit-animation-name: hoverchuto;
+    animation-duration: 1s;
+    
+}
+@-webkit-keyframes hoverchuto{
+    0%{width: 0%;}
+    50%{width: 100%;}
+    100%{width:0%;}
+}
+
+.mothinh:hover .chunho{
+    opacity: 1;
+    /* transform: translateX(0px); */
+}
+
+.mothinh:hover .chuto{
+    opacity: 1;
+    /* transform: translateY(0px); */
+}
+/* end content2 */
+.content3{
+    width: 80%;
+    margin: auto;
+    padding: 60px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.motlogo{
+    width: 16.6%;
+    padding: 10px;   
+}
+.motlogo img{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    transition: 0.4s;
+}
+.motlogo:hover img{
+    transform: scale(1.2);
+}
+/* end content3  */
+hr{
+    width: 80%;
+}
+.content4{
+    width: 80%;
+    margin: auto;
+    padding: 60px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.trai{
+    width: 20%;
+}
+.trai h2{
+    font-family: var(--font1);
+    font-size: var(--size3);
+    width: 80%;
+    font-weight: 400;
+    line-height: var(--lineheight2);
+
+    
+    color: var(--color2);
+    padding-bottom: 20px;
+    
+}
+.giua{
+    width: 60%;
+}
+.giua p{
+    width: 70%;
+    line-height: var(--lineheight2);
+    font-size: var(--size2);
+    font-family: var(--font2);
+    color: var(--color2);
+}
+.phai{
+    width: 20%;
+    
+    float: left;;
+}
+.phai p {
+    line-height: var(--lineheight2);
+    font-size: var(--size2);
+    font-family: var(--font2);
+    color: var(--color2);
+}
+
+.phai p .iconmove{
+    
+    position: relative;
+    left: -10px;
+    transition: 0.4s;
+}
+.phai p:hover .iconmove{
+    
+    position: relative;
+    left: 0px;
+}
+/* end content4 */
+.content5{
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    background: black;
+    line-height: var(--lineheight2);
+    font-size: var(--size2);
+    font-family: var(--font2);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nhotrai{
+    width: 50%;
+    text-align: left;
+}
+.nhophai{
+    width: 50%;
+    text-align: right;
+}
+.nhophai .traitim{
+    color: greenyellow;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .banner_top ._3cot ._1cot.cotgiua img{
+        height: 50px;
+    }
+    .banner_top ._3cot ._1cot.cotphai a{
+        color: white;
+        font-size: 12px;
+        padding: 15px 2px;
+        display: inline-block;
+    }
+    .text_banner .content{
+        padding: 30px 10px;
+    }
+    .text_banner .content h1{
+        font-size: 38px;
+    }
+    .content1{
+        
+        display: block;
+        padding: 80px 20px;
+    }
+    .content1 .left{
+        width: 100%;
+    }
+    .content1 .right{
+        width: 100%;
+    }
+    
+    .mothinh{
+        width: 100%;
+    }
+    .motlogo{
+        width: 100%;
+        text-align: center; 
+    }
+    .trai, .giua, .phai{
+        width: 100%;
+    }
+    .phai{
+        text-align: right;
+    }
+    .nhotrai, .nhophai{
+        width: 100%;
+        text-align: center;
+    }
+    hr{
+        width: 100%;
+    }
+        
+}
+@media only screen and (min-width: 1200px){
+    .text_banner .content, .content1, .galerry, .content3, .content4{
+        width: 1170px; 
+    }
+}
+
+
