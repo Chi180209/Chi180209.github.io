@@ -217,11 +217,33 @@ body{
 
     margin: auto;
     padding: 20%;
+    text-align: center;
     
 }
 .avatar img {
     width: 100%;
     
+}
+.avatar .nutdown{
+    background-color: var(--mauHighlight);
+    margin: 30px auto;
+    border-radius: 0%;
+    color: var(--mauNenNhat);
+    border: none;
+}
+.avatar .nutdown:hover{
+    background-color: var(--mauNenDam);
+    
+}
+.nutdown a{
+    color: var(--mauNenNhat);
+}
+.nutdown a:link{
+    text-decoration: none;
+    
+}
+.nutdown a:hover{
+    color: var(--mauHighlight);
 }
 .intro{
     padding: 10% 15% 10% 0;
