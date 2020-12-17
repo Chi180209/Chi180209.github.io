@@ -118,22 +118,16 @@ body{
 .menuTop.toggle .bntHome .bnt1Line{
     display: none;
 }
-.current{
-    position: absolute;
-    top: 100px;
-    left: 25px;
-    display: visible;
-    height: 100%;
-    width: 35px;
+.current{    }
+.current h3{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     color: var(--mauChu);
     font-size: 40px;
-    
-    font-weight: 200;
-    
     text-align: center;
-    letter-spacing: 5px;
-    transition: 0.4s;
-    
+    padding: 90px 0;
+    margin: auto;
+    font-weight: 200;
     
 }
 .menuTop.toggle .current{
@@ -246,19 +240,21 @@ body{
     color: var(--mauHighlight);
 }
 .intro{
-    padding: 10% 15% 10% 0;
+    padding:50px 50px 30px 0;
+    
     color: #7a5932;
 }
 .intro h1{
-    font-size: 75px;
+    font-size: 60px;
     font-weight: 200;
-    line-height: 74px;
+    line-height: 60px;
     margin-bottom: 35px;
+    text-align: center;
 }
 .intro h4{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 200;
-    line-height: 25px;
+    line-height: 35px;
 }
 .intro span{
     font-weight: bolder;
@@ -806,13 +802,6 @@ width: 100%;
 .traitim{
     color: pink;
 }
-
-
-
-
-
-
-
 /* het content */
 
 /* css cho cac man hinh dien thoai */
@@ -829,7 +818,7 @@ width: 100%;
     }
     
     .current{
-        top: 0;
+        /* top: 0;
         left: 0;
         width: 100%;
         height: 90px;
@@ -839,7 +828,16 @@ width: 100%;
         padding-right: 15px;
         text-align: right;
         transition: 0.4s;
+        font-size: 30px; */
+    }
+    .current h3{
+        writing-mode: unset;
+        text-orientation: unset;
+        /* text-align: right; */
+        padding: 23px 10px 23px 45px;
+        margin: auto;
         font-size: 30px;
+
     }
     .menu{
         width: 100%;
@@ -867,7 +865,11 @@ width: 100%;
         padding: 20px;
     }
     .intro h1{
-        font-size: 55px;
+        font-size: 50px;
+        
+    }
+    .intro h4{
+        font-size: 18px;
     }
     .education, .experience, .skill,  .language, .certification{
         padding: 20px;
@@ -918,7 +920,7 @@ width: 100%;
 }
 @media only screen and (min-width:600px){
     .contentLetter{
-        padding: 20px;
+        font-size: 13px;
         writing-mode: unset;
         text-orientation: unset;
     }
@@ -935,6 +937,8 @@ width: 100%;
     .contentLetter{
         writing-mode: vertical-rl;
         text-orientation: upright;
+        padding: 50px;
+        font-size: 20px;
     }    
     .filter-ItemPo li{
         width: 33.33%;
@@ -989,6 +993,11 @@ width: 100%;
     }
     .letterPR{
         width: 80%;  
+    }
+    .contentLetter{
+        padding: 60px;
+        font-size: 22px;
+        height: 600px;
     }
     
 

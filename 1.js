@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded",function(){
         //console.log(vtprofile, vtresume, vtporfolio, vtcontact);
 
     //khai bao phan tu cho cac phan trong menu
-    var current = document.querySelector('.current');
+    var 
+    current = document.querySelector('.current h3');
         listMenu = document.querySelectorAll('.menu ul li a');
         console.log(listMenu);
     var trangthai = 'duoi';
