@@ -13,13 +13,10 @@ document.addEventListener("DOMContentLoaded",function(){
     var profile = document.getElementById('profile'),
         resume = document.getElementById('resume'),
         porfolio = document.getElementById('porfolio'),
-        // contact = document.getElementById('contact');
         vtprofile = profile.offsetTop,
         vtresume = resume.offsetTop,
         vtporfolio = porfolio.offsetTop;
-        //vtcontact = contact.offsetTop;
-
-        //console.log(vtprofile, vtresume, vtporfolio, vtcontact);
+        
 
     //khai bao phan tu cho cac phan trong menu
     var 
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded",function(){
             
             listMenu[1].classList.remove('hl');
             listMenu[2].classList.remove('hl');
-            // listMenu[3].classList.remove('hl');
             listMenu[0].classList.add('hl');
             current.innerHTML = 'プロフィール';
             
@@ -41,60 +37,17 @@ document.addEventListener("DOMContentLoaded",function(){
         else if ((window.pageYOffset >= vtresume) && (window.pageYOffset < vtporfolio)) {
             listMenu[0].classList.remove('hl');
             listMenu[2].classList.remove('hl');
-            // listMenu[3].classList.remove('hl');
             listMenu[1].classList.add('hl');
             current.innerHTML = 'レジュメ';
 
         }
-        else 
-        // ((window.pageYOffset >= vtporfolio) && (window.pageYOffset < vtcontact)) 
-        {
+        else{
             listMenu[0].classList.remove('hl');
             listMenu[1].classList.remove('hl');
-            // listMenu[3].classList.remove('hl');
             listMenu[2].classList.add('hl');
             current.innerHTML = 'ポートフォリオ';
         }
-        // else{
-        //     listMenu[0].classList.remove('hl');
-        //     listMenu[1].classList.remove('hl');
-        //     listMenu[2].classList.remove('hl');
-            
-        //     listMenu[3].classList.add('hl');
-        //     current.innerHTML = '問い合わせ';
-        // } 
     })
-
-    //filter cho phan so thich
-    // var sortFaBnt = document.querySelector('.navBarFavor').children;
-    // var sortFaItem = document.querySelector('.mansory').children;
-    // console.log(sortFaItem);
-
-    // for(var i = 0; i < sortFaBnt.length; i++){
-    //     sortFaBnt[i].addEventListener('click', function(){
-    //         for(var j = 0; j < sortFaBnt.length; j++){
-    //             sortFaBnt[j].classList.remove('now');
-    //         }
-    //         this.classList.add('now');
-
-    //         var targetData = this.getAttribute('data-targetfa');
-            
-    //         for(var k = 0; k < sortFaItem.length; k++){
-    //             sortFaItem[k].classList.remove('active');
-    //             sortFaItem[k].classList.add('delete');
-
-    //             if(sortFaItem[k].getAttribute('data-itemfa') == targetData || targetData == 'all'){
-    //                 sortFaItem[k].classList.remove('delete');
-    //                 sortFaItem[k].classList.add('active');
-    //             }
-    //         }
-    //     })
-    // }
-
-
-
-
-
     //xu ly click chuot cho nut phan porfolio
     //khai bao phan tu
     var nutPo = document.querySelector('.buttonList'),
