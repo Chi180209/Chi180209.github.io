@@ -529,7 +529,7 @@ span.circle:after{
     font-size: 60px;
     text-align: center;
     margin: auto;
-    padding:20px 10px;
+    padding:40px 10px;
     
     font-weight: 200;
     
@@ -538,11 +538,11 @@ span.circle:after{
 }
 .contentLetter{
     background-color: var(--mauNenDam);
-    /* height: 100%; */
+    
     width: 80%;
     padding: 20px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    /* writing-mode: vertical-rl;
+    text-orientation: upright; */
     color: var(--mauChu);
     
     font-size: 17px;
@@ -935,8 +935,8 @@ width: 100%;
 @media only screen and (min-width: 992px){
     
     .contentLetter{
-        writing-mode: vertical-rl;
-        text-orientation: upright;
+        /* writing-mode: vertical-rl;
+        text-orientation: upright; */
         padding: 50px;
         font-size: 20px;
     }    
