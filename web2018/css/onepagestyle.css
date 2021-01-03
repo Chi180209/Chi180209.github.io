@@ -26,7 +26,8 @@ html,body{
 }
 .right{
     width: 100%;
-    padding-left: 200px;
+    padding-left: 205px;
+    padding-right: 5px;
 }
 .place-name{
     text-align: center;
@@ -52,28 +53,27 @@ li a{
     
     color:white;
 }
-/* li a:hover{
-    
-    border: solid 2px white;
-    width: 120px;
-    left: 0;
-} */
+
 #gallery{
     width: 100%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    columns: 4;
+    column-gap: 5px;
 }
 .picture-cell{
-    width: 25%;
+    width: 100%;
     padding: 5px;
+    overflow: hidden;
+    break-inside: avoid;
 }
 
-.picture-cell:hover{
-    opacity: 1.0;
-} 
 .picture-cell img{
     width: 100%;
+    transition: 0.4s;
+    
+}
+.picture-cell img:hover{
+    opacity: 0.5;  
 }
 
 .title {
@@ -138,10 +138,35 @@ li a{
         padding-top: 220px;
         width: 100%;
     }
+    #gallery{
+        
+        columns: 1;
+        
+    }
     .picture-cell{
-        width: 50%;
-        padding: 5px;
-        margin: auto;
+        width: 100%;
+        padding: 10px;
+        
+    }
+}
+@media only screen and (min-width:600px){
+    #gallery{
+        columns: 2;
+    }
+}
+@media only screen and (min-width:768px){
+    #gallery{
+        columns: 3;
+    }
+}
+@media only screen and (min-width:992px){
+    #gallery{
+        columns: 4;
+    }
+}
+@media only screen and (min-width:1200px){
+    #gallery{
+        columns: 5;
     }
 }
 

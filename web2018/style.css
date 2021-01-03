@@ -1,0 +1,183 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.toppage{
+    position: relative;
+    background: url(img_home/Futaritabi.jpg) bottom center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: auto 25px;
+    transition: 0.4s;
+}
+.menu ul li a{
+    color: whitesmoke;
+}
+.menu ul li a:link{
+    text-decoration: none;
+}
+.menu ul li:hover{
+    transform: scale(1.5);
+}
+.chu{
+    position: absolute;
+    top: calc(50% - 80px);
+    left: calc(50% - 190px);
+    border: solid 3px whitesmoke;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+.chu h1{
+    font-size: 80px;
+    color: whitesmoke;
+    line-height: 160px;
+    width: 380px;
+    height: 160px;
+    text-align: center;
+}
+#intro, #place{
+    width: 900px;
+    margin: auto;
+}
+.title{
+    font-size: 30px;
+    padding: 30px;
+    text-align: center;
+}
+.para{
+    padding: 30px;
+    text-indent: 30px;
+}
+.gallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery-cell{
+    width: 33.33%;
+    height: 250px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+.gallery-cell:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    transform: scale(1);
+    border: solid 0px whitesmoke;
+    background-color: none;
+}
+.gallery-cell:hover:before{
+    border: solid 1px whitesmoke;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-sizing: border-box;
+    transform: scale(0.8);
+}
+
+.gallery-cell img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-cell-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    text-align: center;
+    padding: 30px;
+    opacity: 0;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-cell:hover .gallery-cell-text{
+    opacity: 1;
+}
+.gallery-cell-text h2{
+    font-size: 30px;
+    color: whitesmoke;
+    width: 100%;
+    
+}
+
+.gallery-cell-text a:link{
+    text-decoration: none;  
+}
+.footer-text{
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    text-align: center;
+    padding: 14px 16px;
+    color: whitesmoke;
+    margin-top: 100px;
+}
+@media only screen and (max-width:768px){
+    #intro, #place{
+        width: 90%;
+    }
+    .gallery-cell{
+        width: 50%;
+        padding: 10px;
+    }
+}
+@media only screen and (max-width:600px){
+    .chu{
+    
+        position: absolute;
+        width: 90%;
+        top: calc(50% - 70px);
+        left: 5%;
+        border: solid 2px whitesmoke;
+        background-color: rgba(0, 0, 0, 0.479);
+    }
+    .chu h1{
+        font-size: 80px;
+        color: whitesmoke;
+        line-height: 140px;
+        width: 100%;
+        height: 140px;
+        text-align: center;
+    }
+    #intro, #place{
+        width: 100%;
+    }
+    .gallery-cell{
+        width: 100%;
+        padding: 10px;
+    }
+    .gallery-cell-text{
+        padding-top: 60px;
+    }
+}
+
+

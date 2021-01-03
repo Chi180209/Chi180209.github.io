@@ -24,12 +24,22 @@
                 <div class="bnt1Line"></div>
             </div>
             <div class="current">
-                <h3>プロフィール</h3>
+
+                <div class="profile hienchu">
+                    <h3>プロフィール</h3>
+                </div>
+                <div class="resume">
+                    <h3>レジュメ</h3>
+                </div>
+                <div class="porfolio">
+                    <h3>ポートフォリオ</h3>
+                </div>
+                
             </div>
             <div class="menu"> 
                 <ul>
                     <li>
-                        <a href="#profile">プロフィール</a>
+                        <a href="#profile" class="hl">プロフィール</a>
                     </li>
                     <li>
                         <a href="#resume">レジュメ</a> 
@@ -304,7 +314,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" id="certication">
+                <div class="row">
                     <div class="col">
                         <div class="certification">
                             <h3>資格</h3>
@@ -356,12 +366,12 @@
         <section id="porfolio">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm">
+                    <div class="col-12">
                         <div class="bntList">
                             <div class="buttonList">
                                 <div class="button"></div>
                             </div>
-                            
+                    
                             <div class="listPo">
                                 <ul class="filter-MenuPo">
                                     <li data-target="all">All</li>
@@ -371,51 +381,64 @@
                             </div>
                         </div> 
                     </div>
+
+                    <div class="col-12">
+                        <ul class="filter-ItemPo">
+                            <li data-item="web" >
+                                <a href="Belton/index.html">
+                                    <div class="bo">
+                                        <img src="Belton/img/fs.jpg" alt="" class="lop1">
+                                        <div class="lop2"></div>
+                                        <div class="lop3">
+                                            Web <br>
+                                            <span>HTML・CSS</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <li data-item="web" >
+                                <a href="web2018/index.html">
+                                    <div class="bo">
+                                        <img src="images/Futaritabi.JPG" alt="" class="lop1">
+                                        <div class="lop2"></div>
+                                        <div class="lop3">
+                                            Web <br>
+                                            <span>HTML・CSS</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <li data-item="android" >
+                                <a href="https://youtu.be/UomkQdArhhE">
+                                    <div class="bo">
+                                        <img src="images/R app.png" alt="" class="lop1">
+                                        <div class="lop2"></div>
+                                        <div class="lop3">
+                                            Android App　<br>
+                                            <span>Java・Firebase</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>                 
+                    </div>
+
+
                 </div>  
 
-                <div class="row">
-                    <ul class="filter-ItemPo">
-                        <li data-item="web" >
-                            <a href="Belton/index.html">
-                                <div class="bo">
-                                    <img src="Belton/img/fs.jpg" alt="" class="lop1">
-                                    <div class="lop2"></div>
-                                    <div class="lop3">Web</div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li data-item="web" >
-                            <a href="web2018/index.html">
-                                <div class="bo">
-                                    <img src="images/Futaritabi.JPG" alt="" class="lop1">
-                                    <div class="lop2"></div>
-                                    <div class="lop3">Web</div>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li data-item="android" >
-                            <a href="https://youtu.be/UomkQdArhhE">
-                                <div class="bo">
-                                    <img src="images/R app.png" alt="" class="lop1">
-                                    <div class="lop2"></div>
-                                    <div class="lop3">Android App</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>                 
-                </div>
+                
             </div>
         </section>
 
         
-        <section class="footer">
+        <div class="footer">
             <div class="nd">
-            <p class="ndtrai">@ My CV 2020</p>
-            <p class="ndphai">Create with <i class="fa fa-heart traitim" aria-hidden="true"></i> by UChi</p>
+                <p class="ndtrai">@ My CV 2020</p>
+                <p class="ndphai">Create with <i class="fa fa-heart traitim" aria-hidden="true"></i> by UChi</p>
+            </div>
         </div>
-        </section>
         
 
     </div>

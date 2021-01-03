@@ -53,9 +53,6 @@
     padding: 20px 30px;
 
 }
-.banner_top ._3cot ._1cot.cottrai a:hover{
-    color: #0345bf;
-}
 .banner_top ._3cot ._1cot.cotgiua{
     text-align: center;
 
@@ -167,9 +164,9 @@
 }
 .chunho{
     position: absolute;
-    top: 50px;
-    right: 40px;
-    font-size: 20px;
+    top: 15%;
+    right: 10%;
+    font-size: 18px;
     font-family: var(--font2);
     color: white;
     padding:0 8px;
@@ -201,9 +198,11 @@
 }
 .chuto{
     position: absolute;
-    top: 85px;
-    right: 40px;
-    font-size: 30px;
+    top: 25%;
+    right: 10%;
+    width: 85%;
+    text-align: right;
+    font-size: 28px;
     font-family: var(--font1);
     color: white;
     text-transform: uppercase;
@@ -383,6 +382,9 @@ hr{
     .mothinh{
         width: 100%;
     }
+    .mothinh .chuto{
+        font-size: 23px;
+    }
     .motlogo{
         width: 100%;
         text-align: center; 
@@ -402,6 +404,7 @@ hr{
     }
         
 }
+
 @media only screen and (min-width: 1200px){
     .text_banner .content, .content1, .galerry, .content3, .content4{
         width: 1170px; 

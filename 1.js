@@ -1,53 +1,63 @@
 document.addEventListener("DOMContentLoaded",function(){
+    
+
+    // //xu ly load cac phan tu trong trang
+    let itemrow = document.querySelectorAll('.row');
+    window.addEventListener('scroll', scanItem);
+
+    function scanItem (){
+        itemrow.forEach(item => {
+            if(isVisible(item)){
+                item.classList.add('hienlen');
+            }else{
+                item.classList.remove('hienlen');
+            }
+        })
+    }
+
+    function isVisible (item){
+        const elementRow = item.getBoundingClientRect();
+        let distancefromTop = -100;
+        return elementRow.top - window.innerHeight < distancefromTop ? true : false;
+    }
+
+    // xu ly scrollspy
+    const spyScrolling = () => {
+        const sections = document.querySelectorAll('section');
+        // console.log(sections);
+        window.onscroll = () =>{
+            const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            // console.log(scrollPosition);
+            for (let s in sections){
+                if(sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPosition){
+                    const id = sections[s].id;
+                    // console.log(id);
+                    document.querySelector('.hl')
+                    .classList.remove('hl');
+
+                    document.querySelector( `a[href*=${ id }]` ).classList.add('hl');
+                    
+                    // console.log(sections[s].offsetTop);
+                    document.querySelector('.hienchu').classList.remove('hienchu');
+                    document.querySelector(`[class*=${ id }]`).classList.add('hienchu');
+                }
+            }
+        }
+    }
+    //function call for scrollspy
+    spyScrolling();
+    
     //khai bao phan tu cho nut Home
     var home = document.querySelector('.bntHome'),
-        holder = document.querySelector('.menuTop');
+        holder = document.querySelector('.menuTop'),
+        current = document.querySelector('.current');
     
         //xu ly cho nut Home
     home.addEventListener('click',function(){
         holder.classList.toggle('toggle');
+        current.classList.toggle('an');
     })
 
-    //xu ly cuon chuot
-    //khai bao phan tu cho cac phan trong content
-    var profile = document.getElementById('profile'),
-        resume = document.getElementById('resume'),
-        porfolio = document.getElementById('porfolio'),
-        vtprofile = profile.offsetTop,
-        vtresume = resume.offsetTop,
-        vtporfolio = porfolio.offsetTop;
-        
-
-    //khai bao phan tu cho cac phan trong menu
-    var 
-    current = document.querySelector('.current h3');
-        listMenu = document.querySelectorAll('.menu ul li a');
-        console.log(listMenu);
-    var trangthai = 'duoi';
-    window.addEventListener('scroll',function(){
-        //xu ly cuon chuot profile
-        if (window.pageYOffset < vtresume){
-            
-            listMenu[1].classList.remove('hl');
-            listMenu[2].classList.remove('hl');
-            listMenu[0].classList.add('hl');
-            current.innerHTML = 'プロフィール';
-            
-        }
-        else if ((window.pageYOffset >= vtresume) && (window.pageYOffset < vtporfolio)) {
-            listMenu[0].classList.remove('hl');
-            listMenu[2].classList.remove('hl');
-            listMenu[1].classList.add('hl');
-            current.innerHTML = 'レジュメ';
-
-        }
-        else{
-            listMenu[0].classList.remove('hl');
-            listMenu[1].classList.remove('hl');
-            listMenu[2].classList.add('hl');
-            current.innerHTML = 'ポートフォリオ';
-        }
-    })
     //xu ly click chuot cho nut phan porfolio
     //khai bao phan tu
     var nutPo = document.querySelector('.buttonList'),
@@ -85,6 +95,7 @@ document.addEventListener("DOMContentLoaded",function(){
         
 
     
+
 
 
 
