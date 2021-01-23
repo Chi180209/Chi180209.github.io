@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded",function(){
             }
         }
     }
-    //function call for scrollspy
+    //ham goi cho scrollspy
     spyScrolling();
     
     //khai bao phan tu cho nut Home
