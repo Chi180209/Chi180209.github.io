@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner scroll effect Moonlight</title>
+    <link rel="stylesheet" href="1.css">
+    <!-- font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <img src="assets/bg.jpg" alt="" id="bg">
+        <img src="assets/moon.png" alt="" id="moon">
+        <img src="assets/mountain.png" alt="" id="mountain">
+        <img src="assets/road.png" alt="" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+
+
+    <script>
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', () => {
+            var value = window.scrollY;
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.right = value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+
+        })
+    </script>
+</body>
+</html>

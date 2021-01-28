@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Video Slide</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+            <video src="vidOne.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>河童橋　1.5km</h2>
+            </div>
+        </div>
+        <div class="box box2">
+            <video src="vidThree.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>明神池</h2>
+            </div>
+        </div>
+        <div class="box box3">
+            <video src="vidTwo.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>明神橋</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let box = document.querySelectorAll('.box');
+        box.forEach(popup => popup.addEventListener('click', () => {
+            popup.classList.toggle('active');
+        }))
+    </script>
+</body>
+</html>
